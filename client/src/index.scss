@@ -1,5 +1,10 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -20,7 +25,6 @@ nav {
   display: flex;
   height: 50px;
   background: white;
-  position: fixed;
   width: 100%;
   align-items: center;
   font-size: 0.7rem;
@@ -31,5 +35,21 @@ nav {
     font-size: 2rem;
     margin-left: 10px;
     color: teal;
+  }
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+
+  .btn {
+    background-color: orange;
+    border-radius: 5px;
+    padding: 5px;
+    letter-spacing: 0;
+    font-size: 0.9rem;
   }
 }
