@@ -1,3 +1,4 @@
+//define table model for bookings
 module.exports = function(sequelize, DataTypes) {
   let Booking = sequelize.define('Booking', {
     name: {
