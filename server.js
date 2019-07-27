@@ -3,7 +3,7 @@ const db = require('./models');
 const cors = require('cors');
 const routes = require('./routes/api/api-routes');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 //middleware
