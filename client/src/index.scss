@@ -53,3 +53,27 @@ nav {
     font-size: 0.9rem;
   }
 }
+
+.tableContainer {
+  margin: 5px;
+}
+.bookingsTable {
+  white-space: nowrap;
+  width: 100%;
+  text-align: justify;
+  border-collapse: collapse;
+
+  th {
+    font-weight: normal;
+    padding: 5px;
+  }
+
+  td {
+    background-color: white;
+    height: 50px;
+    overflow: hidden;
+    font-size: 0.8rem;
+    vertical-align: top;
+    padding: 5px;
+  }
+}
