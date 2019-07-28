@@ -94,5 +94,32 @@ nav {
   h2 {
     font-weight: 400;
     letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  input {
+    width: 50%;
+    height: 25px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    font-size: 0.8rem;
+  }
+  .stateZip {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+  }
+  .state {
+    width: 100%;
+  }
+  .zipcode {
+    width: 100%;
   }
 }
