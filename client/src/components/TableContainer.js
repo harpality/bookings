@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import API from '../utils/API';
+import moment from 'moment';
 
 class TableContainer extends Component {
   state = {
@@ -42,7 +43,7 @@ class TableContainer extends Component {
                   <td>{address}</td>
                   <td>{appt_type}</td>
                   <td>
-                    {appt_date} at {appt_time}pm
+                    {moment(appt_date).format('LL')} at {appt_time} pm
                   </td>
                 </tr>
               );
