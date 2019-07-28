@@ -55,7 +55,7 @@ nav {
 }
 
 .tableContainer {
-  margin: 5px;
+  margin: 10px;
 }
 .bookingsTable {
   white-space: nowrap;
@@ -65,7 +65,7 @@ nav {
 
   th {
     font-weight: normal;
-    padding: 5px;
+    padding: 10px;
   }
 
   td {
@@ -75,5 +75,6 @@ nav {
     font-size: 0.8rem;
     vertical-align: top;
     padding: 5px;
+    border-bottom: 1px solid #979797;
   }
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import API from '../utils/API';
-import Table from './Table';
 
 class TableContainer extends Component {
   state = {
@@ -23,10 +22,30 @@ class TableContainer extends Component {
   render() {
     return (
       <div className="tableContainer">
-        <Table />
-        {/* {this.state.result.map(result => (
-          <div>{result.name}</div>
-        ))} */}
+        <table className="bookingsTable">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Booking Type</th>
+              <th>Booking Date/Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.result.map(result => (
+              <tr>
+                <td>{result.name}</td>
+                <td>{result.email}</td>
+                <td>{result.address}</td>
+                <td>{result.appt_type}</td>
+                <td>
+                  {result.appt_date} at {result.appt_time}pm
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     );
   }
