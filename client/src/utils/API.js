@@ -4,7 +4,7 @@ export default {
   getBookings: function() {
     return axios.get('/api/getBookings');
   },
-  createBooking: function() {
-    return axios.post('api/createbooking');
+  createBooking: function(booking) {
+    return axios.post('api/createbooking', booking);
   }
 };

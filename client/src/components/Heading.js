@@ -94,7 +94,7 @@ class Heading extends Component {
                 />
               </div>
               <div className="column">
-                <label htmlFor="date">Booking date</label>
+                <label htmlFor="date">Booking Date</label>
                 <input
                   type="text"
                   onChange={this.handleInputChange}
@@ -115,7 +115,7 @@ class Heading extends Component {
                 />
               </div>
               <div className="column">
-                <label htmlFor="date">Booking time</label>
+                <label htmlFor="date">Booking Time</label>
                 <input
                   type="text"
                   onChange={this.handleInputChange}
