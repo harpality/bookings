@@ -43,7 +43,7 @@ class TableContainer extends Component {
                   <td>{address}</td>
                   <td>{appt_type}</td>
                   <td>
-                    {moment(appt_date).format('LL')} at {appt_time} pm
+                    {moment(appt_date).format('LL')} at {appt_time}
                   </td>
                 </tr>
               );
