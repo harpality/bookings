@@ -33,17 +33,20 @@ class TableContainer extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.result.map(result => (
-              <tr>
-                <td>{result.name}</td>
-                <td>{result.email}</td>
-                <td>{result.address}</td>
-                <td>{result.appt_type}</td>
-                <td>
-                  {result.appt_date} at {result.appt_time}pm
-                </td>
-              </tr>
-            ))}
+            {this.state.result.map(result => {
+              const { name, email, address, appt_type, appt_date, appt_time } = result;
+              return (
+                <tr>
+                  <td>{name}</td>
+                  <td>{email}</td>
+                  <td>{address}</td>
+                  <td>{appt_type}</td>
+                  <td>
+                    {appt_date} at {appt_time}pm
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
