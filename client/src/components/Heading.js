@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Button from './Button';
 import Modal from 'react-modal';
 import Form from './Form';
+import API from '../utils/API';
 
 class Heading extends Component {
   state = {
@@ -40,17 +41,32 @@ class Heading extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log(
-      this.state.name,
-      this.state.email,
-      this.state.street,
-      this.state.city,
-      this.state.state,
-      this.state.zipcode,
-      this.state.bookingType,
-      this.state.date,
-      this.state.time
-    );
+    let address = `${this.state.street} ${this.state.city}, ${this.state.state}, ${
+      this.state.zipcode
+    }`;
+    API.createBooking({
+      name: this.state.name,
+      email: this.state.email,
+      address: address,
+      appt_type: this.state.bookingType,
+      appt_date: this.state.date,
+      appt_time: this.state.time
+    })
+      .then(this.handleCloseModal)
+      .then(API.getBookings)
+      .then(res => console.log(res));
+    // console.log(
+    //   // this.state.name,
+    //   // this.state.email,
+    //   // this.state.street,
+    //   // this.state.city,
+    //   // this.state.state,
+    //   // this.state.zipcode,
+    //   address
+    //   // this.state.bookingType,
+    //   // this.state.date,
+    //   // this.state.time
+    // );
   };
 
   render() {
