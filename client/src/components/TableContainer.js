@@ -35,9 +35,9 @@ class TableContainer extends Component {
           </thead>
           <tbody>
             {this.state.result.map(result => {
-              const { name, email, address, appt_type, appt_date, appt_time } = result;
+              const { id, name, email, address, appt_type, appt_date, appt_time } = result;
               return (
-                <tr>
+                <tr key={id}>
                   <td>{name}</td>
                   <td>{email}</td>
                   <td>{address}</td>
