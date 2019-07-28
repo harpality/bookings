@@ -9,7 +9,7 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #979797;
+  background-color: #cecdcd;
 }
 
 code {
@@ -48,7 +48,7 @@ nav {
   .btn {
     background-color: orange;
     border-radius: 5px;
-    padding: 5px;
+    padding: 5px 8px;
     letter-spacing: 0;
     font-size: 0.9rem;
   }
@@ -66,24 +66,24 @@ nav {
 
   th {
     font-weight: normal;
-    padding: 10px;
+    padding: 5px;
   }
 
   td {
     background-color: white;
-    height: 50px;
+    height: 45px;
     overflow: hidden;
     font-size: 0.8rem;
     vertical-align: top;
-    padding: 10px;
-    border-bottom: 1px solid #979797;
+    padding: 5px;
+    border-bottom: 1px solid #cecdcd;
   }
 }
 
 .modal {
   padding: 20px;
   border-radius: 20px;
-  border: 1px solid #979797;
+  border: 1px solid #cecdcd;
   height: 400px;
   width: 600px;
   background-color: white;
