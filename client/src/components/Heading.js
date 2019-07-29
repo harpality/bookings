@@ -197,11 +197,13 @@ class Heading extends Component {
                   </div>
                 </div>
               </div>
-              <button type="submit" value="Create booking">
+              <button className="btn modalbtn" type="submit" value="Create booking">
                 Create booking
               </button>
             </form>
-            <button onClick={this.handleCloseModal}>X</button>
+            <button className="closebtn" onClick={this.handleCloseModal}>
+              X
+            </button>
           </Modal>
         </div>
         <TableContainer result={this.state.result} />

@@ -44,14 +44,14 @@ nav {
   margin: 10px;
   font-size: 1.5rem;
   letter-spacing: 2px;
+}
 
-  .btn {
-    background-color: orange;
-    border-radius: 5px;
-    padding: 5px 8px;
-    letter-spacing: 0;
-    font-size: 0.9rem;
-  }
+.btn {
+  background-color: orange;
+  border-radius: 5px;
+  padding: 5px 8px;
+  letter-spacing: 0;
+  font-size: 0.9rem;
 }
 
 .tableContainer {
@@ -81,6 +81,7 @@ nav {
 }
 
 .modal {
+  position: relative;
   padding: 20px;
   border-radius: 20px;
   border: 1px solid #cecdcd;
@@ -95,6 +96,19 @@ nav {
     font-weight: 400;
     letter-spacing: 2px;
     margin-bottom: 10px;
+  }
+  .modalbtn {
+    position: absolute;
+    left: 425px;
+    top: 350px;
+  }
+  .closebtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 5px;
+    background-color: orange;
+    border-radius: 5px;
   }
 }
 
