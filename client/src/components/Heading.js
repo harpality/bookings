@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Button from './Button';
 import Modal from 'react-modal';
-import Form from './Form';
 import API from '../utils/API';
 import TableContainer from './TableContainer';
 
 class Heading extends Component {
   state = {
+    result: [],
     showModal: false,
     name: '',
     email: '',
@@ -21,7 +21,18 @@ class Heading extends Component {
 
   componentDidMount() {
     Modal.setAppElement('body');
+    this.getAllBookings();
   }
+
+  getAllBookings = () => {
+    API.getBookings()
+      .then(res =>
+        this.setState({
+          result: res.data
+        })
+      )
+      .catch(err => console.log(err));
+  };
 
   handleOpenModal = () => {
     this.setState({ showModal: true });
@@ -171,7 +182,7 @@ class Heading extends Component {
             <button onClick={this.handleCloseModal}>X</button>
           </Modal>
         </div>
-        <TableContainer />
+        <TableContainer result={this.state.result} />
       </div>
     );
   }
