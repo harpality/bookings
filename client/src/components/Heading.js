@@ -52,7 +52,7 @@ class Heading extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    let address = `${this.state.street} ${this.state.city}, ${this.state.state}, ${
+    let address = `${this.state.street} ${this.state.city}, ${this.state.state.toUpperCase()}, ${
       this.state.zipcode
     }`;
     API.createBooking({
