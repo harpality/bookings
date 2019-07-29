@@ -1,4 +1,4 @@
-//define table model for bookings
+// Define table model for bookings using Sequelize ORM
 module.exports = function(sequelize, DataTypes) {
   let Booking = sequelize.define('Booking', {
     name: {

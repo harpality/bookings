@@ -1,6 +1,8 @@
 import React from 'react';
+// Import moment for time formatting
 import moment from 'moment';
 
+// Function to format user's address into a line break using regex
 function formattedAddress(address) {
   const regex = /[a-zA-z]*,/gm;
   const str = address;
@@ -20,6 +22,7 @@ function formattedAddress(address) {
   }
 }
 
+// Component to display dynamic table with user booking details in table
 const TableContainer = props => {
   return (
     <div className="tableContainer">

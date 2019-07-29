@@ -25,6 +25,8 @@ code {
   white-space: pre-line;
 }
 
+// Navbar
+
 nav {
   display: flex;
   height: 50px;
@@ -42,6 +44,8 @@ nav {
   }
 }
 
+// Heading area
+
 .heading {
   display: flex;
   justify-content: space-between;
@@ -57,7 +61,12 @@ nav {
   letter-spacing: 0.5px;
   font-size: 0.9rem;
   cursor: pointer;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
+
+// Table
 
 .tableContainer {
   letter-spacing: 0.5px;
@@ -92,6 +101,8 @@ nav {
   }
 }
 
+// Modal
+
 .modal {
   position: relative;
   padding: 20px;
@@ -104,6 +115,9 @@ nav {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
   h2 {
     font-weight: 400;
     letter-spacing: 2px;
@@ -123,6 +137,8 @@ nav {
     cursor: pointer;
   }
 }
+
+//Form
 
 form {
   .row {

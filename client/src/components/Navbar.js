@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Main navbar for web app
 const Navbar = () => {
   return (
     <nav>

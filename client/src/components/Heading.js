@@ -5,6 +5,7 @@ import API from '../utils/API';
 import TableContainer from './TableContainer';
 
 class Heading extends Component {
+  // State holds data for form, GET request result, and modal.
   state = {
     result: [],
     showModal: false,
@@ -19,11 +20,13 @@ class Heading extends Component {
     time: ''
   };
 
+  // When component mounts, grab all current booking information from database.
   componentDidMount() {
     Modal.setAppElement('body');
     this.getAllBookings();
   }
 
+  // Function to grab booking detail objects and set it in state as an array.
   getAllBookings = () => {
     API.getBookings()
       .then(res =>
@@ -34,6 +37,7 @@ class Heading extends Component {
       .catch(err => console.log(err));
   };
 
+  // Modal handling functions
   handleOpenModal = () => {
     this.setState({ showModal: true });
   };
@@ -42,6 +46,7 @@ class Heading extends Component {
     this.setState({ showModal: false });
   };
 
+  // Handle input change from form values
   handleInputChange = event => {
     const value = event.target.value;
     const name = event.target.name;
@@ -52,9 +57,11 @@ class Heading extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    //Combine address variables into one variable
     let address = `${this.state.street} ${this.state.city}, ${this.state.state.toUpperCase()}, ${
       this.state.zipcode
     }`;
+    // Save form data as a JSON object and send it as a POST request to the database.
     API.createBooking({
       name: this.state.name,
       email: this.state.email,
@@ -63,7 +70,7 @@ class Heading extends Component {
       appt_date: this.state.date,
       appt_time: this.state.time
     })
-      .then(res => console.log(res.data))
+      // Close modal, grab all latest bookings and clear the form state.
       .then(this.handleCloseModal)
       .then(this.getAllBookings)
       .then(
@@ -81,6 +88,7 @@ class Heading extends Component {
       );
   };
 
+  // Return heading, modal, and form and pass in result props to child component, TableContainer.
   render() {
     return (
       <div>
