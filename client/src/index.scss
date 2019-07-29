@@ -21,6 +21,10 @@ code {
   flex-direction: column;
 }
 
+.display-linebreak {
+  white-space: pre-line;
+}
+
 nav {
   display: flex;
   height: 50px;

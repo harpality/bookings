@@ -1,6 +1,25 @@
 import React from 'react';
 import moment from 'moment';
 
+function formattedAddress(address) {
+  const regex = /[a-zA-z]*,/gm;
+  const str = address;
+  let m;
+
+  while ((m = regex.exec(str)) !== null) {
+    // This is necessary to avoid infinite loops with zero-width matches
+    if (m.index === regex.lastIndex) {
+      regex.lastIndex++;
+    }
+
+    // The result can be accessed through the `m`-variable.
+    m.forEach((match, groupIndex) => {
+      console.log(`Found match, group ${groupIndex}: ${match}`);
+    });
+    return `${address.slice(0, m.index)} \n ${address.slice(m.index, address.length)}`;
+  }
+}
+
 const TableContainer = props => {
   return (
     <div className="tableContainer">
@@ -21,7 +40,9 @@ const TableContainer = props => {
               <tr key={id}>
                 <td className="customerName">{name}</td>
                 <td>{email}</td>
-                <td>{address}</td>
+                <td>
+                  <div className="display-linebreak">{formattedAddress(address)}</div>
+                </td>
                 <td>{appt_type}</td>
                 <td className="rightAlign">
                   {moment(appt_date).format('LL')} at {appt_time}
