@@ -66,10 +66,15 @@ nav {
   border-collapse: collapse;
   .rightAlign {
     text-align: right;
+    padding-right: 10px;
+  }
+  .customerName {
+    padding-left: 10px;
   }
   th {
     font-weight: normal;
-    padding: 5px;
+    padding-bottom: 10px;
+    padding-left: 5px;
   }
 
   td {

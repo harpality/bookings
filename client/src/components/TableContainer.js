@@ -19,7 +19,7 @@ const TableContainer = props => {
             const { id, name, email, address, appt_type, appt_date, appt_time } = result;
             return (
               <tr key={id}>
-                <td>{name}</td>
+                <td className="customerName">{name}</td>
                 <td>{email}</td>
                 <td>{address}</td>
                 <td>{appt_type}</td>
