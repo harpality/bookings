@@ -99,6 +99,7 @@ class Heading extends Component {
                     name="name"
                     value={this.state.name}
                     className="name"
+                    required
                   />
                 </div>
                 <div className="column">
@@ -116,10 +117,11 @@ class Heading extends Component {
                 <div className="column">
                   <label htmlFor="email">Email</label>
                   <input
-                    type="text"
+                    type="email"
                     onChange={this.handleInputChange}
                     name="email"
                     value={this.state.email}
+                    required
                   />
                 </div>
                 <div className="column">
@@ -130,6 +132,7 @@ class Heading extends Component {
                     name="date"
                     value={this.state.date}
                     className="date"
+                    required
                   />
                 </div>
               </div>
@@ -141,6 +144,7 @@ class Heading extends Component {
                     onChange={this.handleInputChange}
                     name="street"
                     value={this.state.street}
+                    required
                   />
                 </div>
                 <div className="column">
@@ -150,6 +154,7 @@ class Heading extends Component {
                     onChange={this.handleInputChange}
                     name="time"
                     value={this.state.time}
+                    required
                   />
                 </div>
               </div>
@@ -161,6 +166,7 @@ class Heading extends Component {
                   name="city"
                   value={this.state.city}
                   className="city"
+                  required
                 />
               </div>
               <div className="stateZip">
@@ -173,6 +179,7 @@ class Heading extends Component {
                       name="state"
                       value={this.state.state}
                       className="state"
+                      required
                     />
                   </div>
                   <div className="column">
@@ -185,6 +192,7 @@ class Heading extends Component {
                       name="zipcode"
                       value={this.state.zipcode}
                       className="zipcode"
+                      required
                     />
                   </div>
                 </div>
