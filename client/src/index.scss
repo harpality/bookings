@@ -63,7 +63,9 @@ nav {
   width: 100%;
   text-align: justify;
   border-collapse: collapse;
-
+  .rightAlign {
+    text-align: right;
+  }
   th {
     font-weight: normal;
     padding: 5px;

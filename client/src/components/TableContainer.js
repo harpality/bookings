@@ -11,7 +11,7 @@ const TableContainer = props => {
             <th>Email</th>
             <th>Address</th>
             <th>Booking Type</th>
-            <th>Booking Date/Time</th>
+            <th className="rightAlign">Booking Date/Time</th>
           </tr>
         </thead>
         <tbody>
@@ -23,7 +23,7 @@ const TableContainer = props => {
                 <td>{email}</td>
                 <td>{address}</td>
                 <td>{appt_type}</td>
-                <td>
+                <td className="rightAlign">
                   {moment(appt_date).format('LL')} at {appt_time}
                 </td>
               </tr>
