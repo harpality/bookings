@@ -64,7 +64,21 @@ class Heading extends Component {
       appt_time: this.state.time
     })
       .then(res => console.log(res.data))
-      .then(this.handleCloseModal);
+      .then(this.handleCloseModal)
+      .then(this.getAllBookings)
+      .then(
+        this.setState({
+          name: '',
+          email: '',
+          street: '',
+          city: '',
+          state: '',
+          zipcode: '',
+          bookingType: 'Dog Walk',
+          date: '',
+          time: ''
+        })
+      );
   };
 
   render() {
