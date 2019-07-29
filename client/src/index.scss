@@ -107,14 +107,11 @@ nav {
     right: 10px;
     top: 10px;
     padding: 3px;
-    // background-color: orange;
     border-radius: 5px;
   }
 }
 
 form {
-  // display: flex;
-  // flex-direction: column;
   .row {
     display: flex;
     width: 100%;
@@ -128,19 +125,12 @@ form {
     flex-basis: 100%;
     flex: 1;
   }
-  // .name {
-  //   width: 100%;
-  // }
-  // .bookingType {
-  //   width: 100%;
-  // }
+
   input,
   select {
     width: 90%;
     height: 25px;
     margin-bottom: 10px;
-    // display: flex;
-    // flex-direction: column;
   }
   .city {
     width: 45%;
