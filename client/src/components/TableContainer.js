@@ -6,7 +6,6 @@ class TableContainer extends Component {
   state = {
     result: []
   };
-
   componentDidMount() {
     this.getAllBookings();
   }

@@ -6,9 +6,7 @@ const Op = require('sequelize').Op;
 
 // route to get all bookings by ascending appointment date
 router.get('/getBookings/', (req, res) => {
-  db.Booking.findAll({ order: [['appt_date', 'ASC']] }).then(result => {
-    res.json(result);
-  });
+  db.Booking.findAll({ order: [['appt_date', 'ASC']] }).then(result => res.json(result));
 });
 
 //route to add a booking
@@ -20,7 +18,7 @@ router.post('/createBooking/', (req, res) => {
     appt_type: req.body.appt_type,
     appt_date: req.body.appt_date,
     appt_time: req.body.appt_time
-  }).then(result => res.json(result));
+  }).then(booking => res.json(booking));
 });
 
 module.exports = router;
